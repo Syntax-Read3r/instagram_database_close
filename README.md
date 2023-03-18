@@ -1,0 +1,3 @@
+1) When creating a database for a website. Focus on the core essentials. Here I will be working on USERS, PHOTOS, COMMENTS, LIKES, HASHTAGS, FOLLOWERS/FOLLOWEES. 
+    - As mentioned above, the core essentials for USERS in this case are NOT emails, password, birthday, profile. What you need first are whatever items that can be used to associate with other TABLES such as user_id, username. 
+        - It's much easier once you know now a user associate with other TABLES to then go ahead and add those extras. 
