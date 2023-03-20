@@ -1,1 +1,1 @@
-CREATE    DATABASE IF NOT EXISTS instagram_clone;
+CREATE    DATABASE IF NOT EXISTS instagram_clone; 
