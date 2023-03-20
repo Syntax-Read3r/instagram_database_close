@@ -57,6 +57,14 @@ ORDER BY  pt.tag_id DESC
 LIMIT     5;
 
 -- ============================================================================
--- We have a small problem with bot on our site>> (Find users who have liked every single photo on the site)
-SELECT    *
-FROM      users
+-- We have a small problem with bots on our site>> (Find users who have liked every single photo on the site)
+SELECT    u.username,
+          COUNT(*)   num_of_likes
+FROM      users u
+JOIN      likes l ON l.user_id = u.id
+GROUP BY  l.user_id
+HAVING    num_of_likes = (
+          SELECT    COUNT(*)
+          FROM      photos
+          )
+--   HAVING is like the WHERE clause, the only difference is, having can be placed after GROUP BY unlike the WHERE clause.
